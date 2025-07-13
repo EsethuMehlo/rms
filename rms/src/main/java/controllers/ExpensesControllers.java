@@ -20,7 +20,7 @@ public class ExpensesControllers {
     private ExpensesRepo ExpensesRepo;
 
     @GetMapping({"","/"})
-    public String showMenuItems (Model model){
+    public String showExpenses (Model model){
         List<Expenses> Expenses = ExpensesRepo.findAll();
         model.addAttribute("Expenses", Expenses);
         return "Expenses/index";

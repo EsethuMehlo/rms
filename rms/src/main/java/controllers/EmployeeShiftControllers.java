@@ -11,12 +11,12 @@ import services.EmployeeShiftRepo;
 import java.util.List;
 
 @Controller
-@RequestMapping("/menuitems")public class EmployeeShiftControllers {
+@RequestMapping("/EmployeeShift")public class EmployeeShiftControllers {
     @Autowired
     private EmployeeShiftRepo EmployeeShiftRepo;
 
     @GetMapping({"","/"})
-    public String showMenuItems (Model model){
+    public String showEmployeeShift (Model model){
         List<EmployeeShift> EmployeeShift = EmployeeShiftRepo.findAll();
         model.addAttribute("EmployeeShift", EmployeeShift);
         return "EmployeeShift/index";
