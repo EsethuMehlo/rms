@@ -12,7 +12,7 @@ import services.ExpensesRepo;
 import java.util.List;
 
 @Controller
-@RequestMapping("/menuitems")
+@RequestMapping("/Expenses")
 
 public class ExpensesControllers {
 
