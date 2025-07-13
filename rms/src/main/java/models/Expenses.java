@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "MenuItems")
-public class MenuItems {
+@Table(name = "Expenses")
+public class Expenses {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

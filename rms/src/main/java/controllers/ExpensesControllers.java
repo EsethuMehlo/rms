@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import services.MenuItemsRepo;
+import services.ExpensesRepo;
 
 
 import java.util.List;
@@ -14,10 +14,10 @@ import java.util.List;
 @Controller
 @RequestMapping("/menuitems")
 
-public class MenuItemsControllers {
+public class ExpensesControllers {
 
     @Autowired
-    private MenuItemsRepo menuitemsRepo;
+    private ExpensesRepo menuitemsRepo;
 
     @GetMapping({"","/"})
     public String showMenuItems (Model model){
