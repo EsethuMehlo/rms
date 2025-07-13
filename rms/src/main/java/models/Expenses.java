@@ -9,17 +9,13 @@ import jakarta.persistence.*;
 public class Expenses {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String name;
+    private String expenseName;
 
-    private String category;
-    private Double price;
-
-    @Column (columnDefinition ="TEXT")
-    private String description;
-    private String imageFilename;
+    private String expenseDate;
+    private Double expenseAmount;
 
     public int getId() {
         return id;
@@ -29,43 +25,27 @@ public class Expenses {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getExpenseName() {
+        return expenseName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setExpenseName(String name) {
+        this.expenseName = expenseName;
     }
 
-    public String getCategory() {
-        return category;
+    public String getExpenseDate() {
+        return expenseDate;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setExpenseDate(String category) {
+        this.expenseDate = expenseDate;
     }
 
-    public Double getPrice() {
-        return price;
+    public Double getExpenseAmount() {
+        return expenseAmount;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getImageFilename() {
-        return imageFilename;
-    }
-
-    public void setImageFilename(String imageFilename) {
-        this.imageFilename = imageFilename;
+    public void setExpenseAmount(Double expenseAmount) {
+        this.expenseAmount = expenseAmount;
     }
 }

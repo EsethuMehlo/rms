@@ -1,6 +1,6 @@
 package controllers;
 
-import models.MenuItems;
+import models.Expenses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,13 +17,13 @@ import java.util.List;
 public class ExpensesControllers {
 
     @Autowired
-    private ExpensesRepo menuitemsRepo;
+    private ExpensesRepo ExpensesRepo;
 
     @GetMapping({"","/"})
     public String showMenuItems (Model model){
-        List<MenuItems> menuitems = menuitemsRepo.findAll();
-        model.addAttribute("menuItem", menuitems);
-        return "menuItems/index";
+        List<Expenses> Expenses = ExpensesRepo.findAll();
+        model.addAttribute("Expenses", Expenses);
+        return "Expenses/index";
 
     }
 }
