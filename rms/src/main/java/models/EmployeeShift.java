@@ -11,7 +11,7 @@ public class EmployeeShift {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int expenseId;
+    private int id;
 
     private LocalDateTime dateNow;
 
@@ -19,11 +19,11 @@ public class EmployeeShift {
     private LocalDateTime endTime;
 
     public int getExpenseId() {
-        return expenseId;
+        return id;
     }
 
-    public void setExpenseId(int expenseId) {
-        this.expenseId = expenseId;
+    public void setExpenseId(int id) {
+        this.id = id;
     }
 
     public LocalDateTime getDateNow() {
